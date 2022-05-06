@@ -1,0 +1,21 @@
+.section4 {
+  flex-direction: row-reverse;
+
+  &__text {
+    padding-right: 50px;
+    text-align: right;
+
+    h3,
+    p {
+      text-align: right;
+
+      @include breakpoint(mobile) {
+        text-align: left;
+      }
+    }
+  }
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+  }
+}

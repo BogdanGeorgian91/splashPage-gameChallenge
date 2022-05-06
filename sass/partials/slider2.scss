@@ -1,0 +1,93 @@
+.slider {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    margin-bottom: 50px;
+    color: black;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__container {
+    width: 800px;
+    height: 400px;
+    background: #98e6d6;
+    border-radius: 0px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 15px;
+    position: relative;
+
+    @include breakpoint(mobile) {
+      width: 738px;
+      height: 400px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 50px 100px 0 100px;
+
+    p {
+      text-align: left;
+      line-height: 22px;
+      margin-bottom: 15px;
+    }
+
+    span {
+      text-align: left;
+      color: #2980b9;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+.quote {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 81px;
+  height: 71.44px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.quote1 {
+  background-image: url("/assets/img/right-quote-sign\ 2.png");
+  top: -10px;
+  left: -10px;
+
+  @include breakpoint(mobile) {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+.quote2 {
+  background-image: url("/assets/img/right-quote-sign\ 3.png");
+  bottom: -10px;
+  right: -10px;
+
+  @include breakpoint(mobile) {
+    bottom: 10px;
+    right: 10px;
+  }
+}

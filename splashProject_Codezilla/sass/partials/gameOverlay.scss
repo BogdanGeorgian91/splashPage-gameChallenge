@@ -1,0 +1,132 @@
+.game__overlay {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 3px solid #666666;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.game__overlay.active {
+  visibility: visible;
+}
+
+.game__content {
+  background-color: #f5efef;
+  margin: 0 auto;
+  overflow: scroll;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    padding: 0.5rem 1rem;
+    height: 10%;
+    background-color: #c4c4c4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__stats {
+    display: flex;
+    gap: 1rem;
+    height: 100%;
+
+    &__component {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .scooterItem__img-small {
+        width: 3.5rem;
+      }
+      .scooterItem__number {
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+
+      .number-red {
+        color: rgb(212, 26, 26);
+      }
+      .number-blue {
+        color: rgb(112, 112, 213);
+      }
+      .number-green {
+        color: rgb(121, 143, 121);
+      }
+    }
+  }
+
+  &__scooters {
+    align-self: center;
+    padding-top: 1rem;
+    width: 40rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .scooterItem {
+    display: inline-block;
+    margin-right: 1.5rem;
+    cursor: pointer;
+
+    &__battery {
+      border-radius: 90%;
+      animation: 2s pulse-anim infinite;
+    }
+
+    position: relative;
+    width: max-content;
+
+    &__energy {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+#game__btn-add,
+#game__btn-stop {
+  padding: 0.7rem 1.6rem;
+  text-transform: uppercase;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+#game__btn-add:hover {
+  background-color: #32dbb9;
+}
+#game__btn-stop {
+  background-color: rgb(231, 5, 5);
+
+  &:hover {
+    background-color: rgb(201, 15, 15);
+  }
+}
+
+@keyframes pulse-anim {
+  0% {
+    box-shadow: #ec1f55 0 0 0 0;
+  }
+  100% {
+    box-shadow: #2198fa00 0 0 0 100px;
+  }
+}

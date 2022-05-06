@@ -1,0 +1,118 @@
+.nav__container {
+  width: 100%;
+  z-index: 999;
+  background: var(--footer1-color);
+
+  &-disabled {
+    z-index: 0;
+  }
+
+  height: $nav-outer-height;
+  position: sticky;
+  top: calc($nav-height-difference * -1);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  width: $container;
+  margin: 0 auto;
+
+  @media (max-width: $laptop-max) {
+    max-width: $container-laptop;
+  }
+  @media (max-width: $tablet-max) {
+    max-width: $container-tablet;
+  }
+  @media (max-width: $phone-max) {
+    max-width: 100%;
+  }
+
+  height: $nav-inner-height;
+  position: sticky;
+  top: 0;
+
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+ 
+
+  @include breakpoint(mobile) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  &__logo {
+    width: 138px;
+    height: 40px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+
+  &__list2 {
+    display: none;
+    background: var(--footer1-color);
+    z-index: 90000;
+
+    &-bm {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-end;
+      padding-right: 10px;
+      padding-bottom: 30px;
+      position: relative;
+      position: absolute;
+      right: 0;
+      top: 4rem;
+      left: 0;
+      z-index: 90000;
+
+      @include breakpoint(mobile) {
+        padding-top: 10px;
+        padding-right: 25px;
+      }
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    cursor: pointer;
+
+    @include breakpoint(mobile) {
+      display: block;
+    }
+
+    &-active &-bar:nth-child(2) {
+      opacity: 0;
+    }
+    &-active &-bar:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    &-active &-bar:nth-child(3) {
+      transform: translateY(-14px) rotate(-45deg);
+    }
+
+    &-bar {
+      display: block;
+      width: 40px;
+      height: 4px;
+      margin: 7px auto;
+      transition: all 0.3s ease-in-out;
+      background-color: #1abc9c;
+      border-radius: 2px;
+    }
+  }
+}

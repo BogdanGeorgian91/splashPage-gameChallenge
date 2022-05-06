@@ -1,0 +1,75 @@
+.section8 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  position: relative;
+
+  h3 {
+    margin-bottom: 50px;
+    color: black;
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+    position: relative;
+
+    &__card {
+      width: 270px;
+      display: flex !important;
+      flex-direction: column;
+      align-content: space-between;
+      justify-items: center;
+      align-items: center;
+
+      &__img {
+        width: 270px;
+        height: 270px;
+        border-radius: 50%;
+        background-image: url("/assets/img/team2.png");
+        margin-bottom: 20px;
+      }
+
+      .card__p {
+        @include breakpoint(mobile) {
+          width: 270px ;
+        }
+      }
+    }
+  }
+}
+
+.slick-arrow {
+  display: none;
+}
+
+.arrow-prev,
+.arrow-next {
+  display: none;
+  background: none;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  transform: scale(4);
+  top: 38%;
+  padding: 0;
+
+  @include breakpoint(mobile) {
+    display: block;
+  }
+}
+
+.arrow-prev {
+  left: 2%;
+}
+
+.arrow-next {
+  right: 2%;
+}
+
+

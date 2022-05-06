@@ -1,0 +1,40 @@
+@mixin sprite($x, $y) {
+  background: url("/assets/img/sprite.png") $x $y no-repeat;
+}
+@mixin animated() {
+  transition: all 0.2s ease;
+}
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin placeholder-color($color) {
+  ::placeholder {
+    color: $color;
+  }
+  :-ms-input-placeholder {
+    color: $color;
+  }
+  ::-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+// Breakpoints
+@mixin breakpoint($device) {
+  @if $device == mobile {
+    @media screen and (max-width: $phone-max) {
+      @content;
+    }
+  } @else if $device == laptop {
+    @media screen and (max-width: $laptop-max) {
+      @content;
+    }
+  } @else if $device == slider {
+    @media screen and (max-width: 839px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "project-1",
+  "version": "1.0.0",
+  "description": "codezilla internship project 1",
+  "author": "marius.pal@codezilla.ro",
+  "browserslist": [
+    "last 10 versions",
+    ">1%",
+    "Firefox ESR",
+    "ie>=11"
+  ],
+  "scripts": {
+    "compile-sass": "sass sass/styles.scss css/styles.css -w"
+  },
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "sass": "^1.49.9"
+  }
+}

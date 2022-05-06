@@ -1,0 +1,30 @@
+input[disabled] {
+  opacity: 0.2;
+}
+form {
+  label {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+    margin-bottom: 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"],
+  textarea,
+  select {
+    border-radius: 5px;
+    border: 1px solid #27ae60;
+    outline: none;
+    margin-bottom: 20px;
+
+    &:focus {
+      border-color: blue;
+    }
+  }
+}

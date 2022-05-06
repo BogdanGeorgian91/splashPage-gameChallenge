@@ -1,0 +1,42 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@font-face {
+  font-family: "MyWebFont";
+  src: url("../fonts/MyWebFont-regular.eot"),
+  url("../fonts/MyWebFont-regular.svg"),
+  url("../fonts/MyWebFont-regular.ttf"),
+  url("../fonts/MyWebFont-regular.woff"),
+  url("../fonts/MyWebFont-regular.woff2");
+}
+@font-face {
+  font-family: "MyWebFont";
+  src: url("../fonts/MyWebFont-bold.eot"),
+  url("../fonts/MyWebFont-bold.svg"),
+  url("../fonts/MyWebFont-bold.ttf"),
+  url("../fonts/MyWebFont-bold.woff"),
+  url("../fonts/MyWebFont-bold.woff2");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "MyWebFont";
+  src: url("../fonts/MyWebFont-italic.eot"),
+  url("../fonts/MyWebFont-italic.svg"),
+  url("../fonts/MyWebFont-italic.ttf"),
+  url("../fonts/MyWebFont-italic.woff"),
+  url("../fonts/MyWebFont-italic.woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "MyWebFont";
+  src: url("../fonts/MyWebFont-bold-italic.eot"),
+  url("../fonts/MyWebFont-bold-italic.svg"),
+  url("../fonts/MyWebFont-bold-italic.ttf"),
+  url("../fonts/MyWebFont-bold-italic.woff"),
+  url("../fonts/MyWebFont-bold-italic.woff2");
+  font-weight: bold;
+  font-style: italic;
+}

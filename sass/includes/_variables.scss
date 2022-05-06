@@ -1,0 +1,33 @@
+// colors
+$ocean-blue: #009dc4;
+$sunny-yellow: #fff917;
+$blood-red: #980002;
+$cement: #a5a391;
+$pencil-blue: #2200ff;
+$primary-color: $ocean-blue;
+$secondary-color: $sunny-yellow;
+$primary-text-color: $pencil-blue;
+$secondary-text-color: $ocean-blue;
+
+$lightGrey: #F2F2F2;
+$grey: #6E6E6E;
+$white: #FFFFFF;
+$blue: #1849AB;
+
+// fonts
+$primary-font: "Open Sans", sans-serif;
+$secondary-font: "MyWebFont", sans-serif;
+
+// sizes
+$container: 1200px;
+$container-laptop: 1000px;
+$container-tablet: 750px;
+$laptop-max: 1367px;
+$tablet-max: 1024px;
+$phone-max: 768px;
+$phone-small-max: 320px;
+
+// Sticky NAV - effect on scroll
+$nav-outer-height: 80px;
+$nav-inner-height: 60px;
+$nav-height-difference: calc($nav-outer-height - $nav-inner-height);

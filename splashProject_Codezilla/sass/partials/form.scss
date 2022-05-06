@@ -1,0 +1,32 @@
+.form {
+  max-width: 738px;
+  align-self: center;
+  border: 1px solid #2980b9;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+  &__inp {
+    height: 34px;
+
+    &::placeholder {
+      color: red;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__img {
+    // border: 2px solid black;
+    // height: 70px;
+  }
+
+  &__btn {
+    align-self: flex-end;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 20px;
+  }
+}

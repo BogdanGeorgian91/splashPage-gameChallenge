@@ -1,0 +1,136 @@
+a,
+input,
+textarea,
+button {
+  @include animated();
+}
+.container {
+  box-sizing: border-box;
+  max-width: $container;
+  margin: 0 auto;
+  // padding: 0 15px;
+
+  @media (max-width: $laptop-max) {
+    max-width: $container-laptop;
+  }
+  @media (max-width: $tablet-max) {
+    max-width: $container-tablet;
+  }
+  @media (max-width: $phone-max) {
+    max-width: 100%;
+  }
+}
+
+.btn {
+  padding: 7px 24px 8px 24px;
+  border-radius: 5px;
+  background-color: #1abc9c;
+  border: none;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 25px;
+  cursor: pointer;
+
+  @include breakpoint(mobile) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.btn:hover {
+  background-color: #158f76;
+}
+
+.two-columns-panel {
+  display: flex;
+  margin-bottom: 30px;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    &__1 {
+      min-width: 575px;
+
+      @include breakpoint(mobile) {
+        width: 738px;
+        margin: 15px 0;
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+    padding-left: 50px;
+
+    @include breakpoint(mobile) {
+      width: 738px;
+      padding: 0;
+    }
+  }
+}
+
+.gray-box {
+  background: #ecf0f1;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 50px;
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  @include breakpoint(mobile) {
+    max-width: 738px;
+    padding: 20px;
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  position: relative;
+}
+
+.theme-light {
+  --color-background: #ffffff;
+  --h3-color: #d35400;
+  --h4-color: #2980b9;
+  --footer1-color: #ecf0f1;
+  --footer2-color: #2c3e50;
+  --primary-text-color: #000000;
+  --acordion-label:#f7c3a0;
+  --acordion-content: #ffd6ba;
+
+  --color-primary: #0060df;
+  --color-secondary: #fbfbfe;
+  --color-accent: #fd6f53;
+  --font-color: #000000;
+}
+
+.theme-dark {
+  --color-background: #2a2c2d;
+  --h3-color: #009dc4;
+  --h4-color: #980002;
+  --footer1-color: #929c9f;
+  --footer2-color: #55585a;
+  --primary-text-color: #fbfbfe;
+  --acordion-label:#978a81;
+  --acordion-content: #e38343;
+
+  --color-primary: #17ed90;
+  --color-secondary: #2a2c2d;
+  --color-accent: #12cdea;
+  --font-color: #ffffff;
+}
